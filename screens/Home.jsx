@@ -1,12 +1,14 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text } from 'react-native';
 
-const Cart = () => {
+const Home = () => {
 	return (
 		<SafeAreaView>
-			<Text>Cart</Text>
+			<Text>Home</Text>
 		</SafeAreaView>
 	)
 }
 
-export default Cart;
+export default Home;
+
+
