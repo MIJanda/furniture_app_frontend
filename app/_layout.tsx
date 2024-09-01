@@ -4,7 +4,6 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from 'react';
 
 export default function RootLayout() {
-
   // load fonts
   const [fontsLoaded] = useFonts({
     pBold: require("@/assets/fonts/Poppins-Bold.ttf"),
@@ -27,7 +26,8 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="index" />
+      <Stack.Screen name="index" options={{ headerShown: false }}
+      />
     </Stack>
   );
 }
