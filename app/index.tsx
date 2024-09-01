@@ -1,15 +1,23 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import { StatusBar } from 'expo-status-bar';
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={styles.container}>
+      <Text style={styles.textStyle}> Edit app/index.tsx to edit this screen.</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textStyle: {
+    fontFamily: 'pMedium',
+    fontSize: 20,
+  },
+});
