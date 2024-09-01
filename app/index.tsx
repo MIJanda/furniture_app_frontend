@@ -1,15 +1,18 @@
-import { Text, View } from "react-native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BottomTabNavigation from '../navigation/BottomTabNavigation';
+
+const Stack = createNativeStackNavigator();
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Bottom Navigation"
+        component={BottomTabNavigation}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
   );
 }
+
+
